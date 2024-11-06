@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registros de Pases a Producción</title>
+</head>
+<body>
+    <h2>Registros de Pases a Producción</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Número de Pase</th>
+            <th>Solicitante</th>
+            <th>Fecha de Registro</th>
+        </tr>
+        {% for registro in registros %}
+        <tr>
+            <td>{{ registro[0] }}</td>
+            <td>{{ registro[1] }}</td>
+            <td>{{ registro[3] }}</td>
+            <td>{{ registro[-1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Regresar</a>
+</body>
+</html>
